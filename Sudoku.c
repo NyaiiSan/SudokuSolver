@@ -14,6 +14,7 @@ int fillNums(SquMap ** map){
                     // printf("====================\n");
                     // printSquMap(new_map);
                     if(fillNums(&new_map)){
+                        destroySquMap(*map);
                         *map = new_map;
                         return 1;
                     }

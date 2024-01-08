@@ -139,9 +139,9 @@ int inputLine(SquMap * head, int y){
         else return 0;
     }
 
-    char * inputS = malloc(100);
-    char * sp = inputS;
-    gets(inputS);
+    char * inputString = malloc(100);
+    char * sp = inputString;
+    fgets(inputString, 100, stdin);
     int val = 0;
     while(1){
         if(*sp >= '0' && *sp <= '9'){
@@ -156,7 +156,7 @@ int inputLine(SquMap * head, int y){
         }
         sp++;
     }
-    free(inputS);
+    free(inputString);
     return 1;
 }
 
